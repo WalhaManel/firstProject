@@ -2,6 +2,8 @@ package tn.esprit.firstproject.Entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table
 public class Bloc {
@@ -12,7 +14,11 @@ public class Bloc {
 
     @Column
     private String nomBloc;
-    @Column Long capaciteBloc;
+    @Column
+    private Long capaciteBloc;
 
-
+    @OneToMany(mappedBy = "bloc",cascade = CascadeType.ALL)
+    private Set<Chambre> chambres;
+    @ManyToOne
+    private Foyer foyer;
 }
