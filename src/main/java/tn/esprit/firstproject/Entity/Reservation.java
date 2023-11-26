@@ -10,9 +10,8 @@ import java.util.Set;
 @Table
 public class Reservation implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private long idReservation;
+    private String idReservation;
     @Column
     private Date anneeUniversite;
     @Column

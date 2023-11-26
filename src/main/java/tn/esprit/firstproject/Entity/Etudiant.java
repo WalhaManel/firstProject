@@ -12,7 +12,7 @@ public class Etudiant implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private long idEtudiant;
+    private long id_etudiant;
     @Column
     private String nom;
     @Column
@@ -23,7 +23,8 @@ public class Etudiant implements Serializable {
     private String ecole;
     @Column
     private Date dateNaissance;
-
+    public Etudiant() {
+    }
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Reservation> reservations;
 
