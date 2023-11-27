@@ -13,6 +13,8 @@ public class EtudiantService implements IEtudiantService  {
     @Autowired
     private EtudiantRepository ERep;
 
+
+
     @Override
     public List<Etudiant> retrieveAllEtudiants(){
         return ERep.retrieveAllEtudiants();
@@ -21,10 +23,10 @@ public class EtudiantService implements IEtudiantService  {
     public Etudiant addEtudiant(Etudiant e){
         return ERep.addEtudiant(e);
     };
-//    @Override
-//    public Etudiant updateEtudiant(Etudiant e){
-//        return ERep.updateEtudiant(e);
-//    };
+    //@Override
+    //public Etudiant updateEtudiant(Etudiant e){
+    //    return ERep.updateEtudiant(e);
+    //};
     @Override
     public Etudiant retrieveEtudiant(Long idEtudiant){
         return ERep.retrieveEtudiant(idEtudiant);

@@ -10,7 +10,7 @@ public interface IEtudiantService {
 
     Etudiant addEtudiant(Etudiant e);
 
-//    Etudiant updateEtudiant(Etudiant e);
+    //Etudiant updateEtudiant(Etudiant e);
 
     Etudiant retrieveEtudiant(Long idEtudiant);
 

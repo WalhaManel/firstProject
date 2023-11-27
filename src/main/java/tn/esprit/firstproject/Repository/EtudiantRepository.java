@@ -17,11 +17,11 @@ public interface EtudiantRepository extends CrudRepository<Etudiant,Long> {
     @Query(value = "INSERT INTO Etudiant VALUES (:e)",nativeQuery = true)
     Etudiant addEtudiant(@Param("e")  Etudiant e);
 
-//    @Query("update Etudiant etu set etu =(:e) where etu.idEtudiant =: e.idEtudiant")
-//    Etudiant updateEtudiant(@Param("e") Etudiant e);
+ // @Query("update Etudiant etu set etu =(:e) where etu.id_etudiant =: e.id_etudiant")
+ //  Etudiant updateEtudiant(@Param("e") Etudiant e);
 
     @Query("select e from Etudiant e where e.id_etudiant =: id")
-    Etudiant retrieveEtudiant(@Param("id") Long idEtudiant);
+    Etudiant retrieveEtudiant(@Param("id") Long id_etudiant);
 
     @Modifying
     @Query("DELETE FROM Etudiant e WHERE e.id_etudiant= ?1")
