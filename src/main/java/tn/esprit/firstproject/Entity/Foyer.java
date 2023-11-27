@@ -23,4 +23,47 @@ public class Foyer implements Serializable {
     private Universite universite;
     @OneToMany(mappedBy = "foyer",cascade = CascadeType.ALL)
     private Set<Bloc> blocs;
+
+    public Foyer() {
+    }
+
+    public Long getIdFoyer() {
+        return idFoyer;
+    }
+
+    public void setIdFoyer(Long idFoyer) {
+        this.idFoyer = idFoyer;
+    }
+
+    public String getNomFoyer() {
+        return nomFoyer;
+    }
+
+    public void setNomFoyer(String nomFoyer) {
+        this.nomFoyer = nomFoyer;
+    }
+
+    public long getCapaciteFoyer() {
+        return capaciteFoyer;
+    }
+
+    public void setCapaciteFoyer(long capaciteFoyer) {
+        this.capaciteFoyer = capaciteFoyer;
+    }
+
+    public Universite getUniversite() {
+        return universite;
+    }
+
+    public void setUniversite(Universite universite) {
+        this.universite = universite;
+    }
+
+    public Set<Bloc> getBlocs() {
+        return blocs;
+    }
+
+    public void setBlocs(Set<Bloc> blocs) {
+        this.blocs = blocs;
+    }
 }

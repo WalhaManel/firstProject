@@ -1,13 +1,17 @@
 package tn.esprit.firstproject.Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import tn.esprit.firstproject.Entity.Chambre;
 import tn.esprit.firstproject.Entity.Reservation;
 import tn.esprit.firstproject.Repository.ChambreRepository;
+import tn.esprit.firstproject.Repository.ReservationRepository;
 
 import java.util.Calendar;
 import java.util.Date;
 
 public class ReservationService implements IReservationService{
+    @Autowired
+    private ReservationRepository reservationRep;
 
     @Override
     public Reservation ajouterReservation(long idChambre, long cinEtudiant) {
